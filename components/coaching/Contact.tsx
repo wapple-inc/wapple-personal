@@ -44,7 +44,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          href="https://forms.gle/placeholder"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSd4EA_kdYs7y-RAsSvhz8ze_XBfGCal7joNQdtlzC7nKMqwCA/viewform"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-10 py-4 rounded-full text-white font-medium text-lg transition-all duration-200 hover:opacity-90 hover:scale-[1.02]"
