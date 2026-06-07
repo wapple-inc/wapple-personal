@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #FAF8F5;
+  --bg-section: #F5F0EA;
+  --text: #1D1D1F;
+  --text-muted: #6E6E73;
+  --accent: #C8956C;
+  --accent-hover: #B07D56;
+  --border: #E8E0D8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
