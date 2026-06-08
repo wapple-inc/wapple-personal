@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "秦善成 | パーソナルコーチング",
   description: "忙しい毎日の中で、あなたのペースで前に進む。オンライン学習伴走コーチング。",
+  verification: {
+    google: "RnmMBhrW4Zv2px8F5F1pWaNkJbPknot7wHvU1jjzrwY",
+  },
 };
 
 export default function RootLayout({
