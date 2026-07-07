@@ -74,6 +74,23 @@ export default function About() {
               アソシエイト認定コーチ（ACC）として、会社員・個人事業主・経営者など幅広くコーチングを提供しています。
             </p>
 
+            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+              運営会社：
+              <a
+                href="https://wapple.co.jp/"
+                className="underline underline-offset-2 hover:opacity-70"
+              >
+                株式会社Wapple
+              </a>
+              ／
+              <a
+                href="https://wapple.co.jp/profile"
+                className="underline underline-offset-2 hover:opacity-70"
+              >
+                代表プロフィール（詳細）
+              </a>
+            </p>
+
           </motion.div>
         </div>
       </div>
