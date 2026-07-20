@@ -24,3 +24,26 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* ===== ジャーナリング・コーチングLP 専用テーマ =====
+   /coaching は :root のテラコッタ系を維持し、/journaling のみ
+   「インクブルー×紙」の配色と明朝体見出しに切り替える */
+.journaling-theme {
+  --bg: #FAF9F6;
+  --bg-section: #EEF1F0;
+  --text: #24313B;
+  --text-muted: #5F6B74;
+  --accent: #35586C;
+  --accent-hover: #294657;
+  --border: #DFE5E4;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* カードはエディトリアル調に角を絞る（数字サークル等の rounded-full は維持） */
+.journaling-theme :is(.rounded-2xl, .rounded-3xl) {
+  border-radius: 0.375rem;
+}
+.journaling-theme a.rounded-full {
+  border-radius: 3px;
+}
