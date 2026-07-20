@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
 
 export default function About() {
   return (
@@ -27,32 +26,15 @@ export default function About() {
           コーチについて
         </motion.h2>
 
-        <div className="flex flex-col md:flex-row gap-12 items-start">
+        <div className="max-w-2xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="md:w-1/3 flex-shrink-0 flex justify-center md:justify-start"
+            className="space-y-5"
           >
-            <div className="w-52 h-52 rounded-3xl overflow-hidden relative">
-              <Image
-                src="/images/profile.png"
-                alt="秦善成"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="md:w-2/3 space-y-5"
-          >
-            <div>
+            <div className="text-center">
               <h3 className="text-xl font-bold mb-1" style={{ color: "var(--text)" }}>
                 秦 善成（はた よしなり）
               </h3>
@@ -74,7 +56,7 @@ export default function About() {
               アソシエイト認定コーチ（ACC）として、会社員・個人事業主・経営者など幅広くコーチングを提供しています。
             </p>
 
-            <p className="text-sm" style={{ color: "var(--text-muted)" }}>
+            <p className="text-sm text-center pt-2" style={{ color: "var(--text-muted)" }}>
               運営会社：
               <a
                 href="https://wapple.co.jp/"
