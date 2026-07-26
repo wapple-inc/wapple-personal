@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "秦善成 | パーソナルコーチング",
+  // 画面上には個人名を出さない方針（本人希望）。指名検索対策として
+  // title と構造化データにのみ名前を残す。
+  title: "パーソナルコーチング・個人向けプログラム | 秦善成",
   description:
-    "ICFアソシエイト認定コーチ・秦善成のパーソナルコーチング。対話で目標と行動を整える「伴走コーチング」と、書く×話すで内省を深める「ジャーナリング・コーチング」の2つのプログラムを提供しています。",
+    "対話で目標と行動を整える「伴走コーチング」と、書く×話すで内省を深める「ジャーナリング・コーチング」。個人向けのオンラインプログラムを提供しています。",
   alternates: { canonical: "https://www.wapple.life/" },
   openGraph: {
-    title: "秦善成 | パーソナルコーチング",
+    title: "パーソナルコーチング・個人向けプログラム",
     description:
-      "対話で目標と行動を整える「伴走コーチング」と、書く×話すで内省を深める「ジャーナリング・コーチング」。無料体験セッション受付中。",
+      "対話で整える「伴走コーチング」と、書いて深める「ジャーナリング・コーチング」。無料体験セッション受付中。",
     url: "https://www.wapple.life/",
-    siteName: "秦善成 コーチング",
+    siteName: "wapple.life",
     locale: "ja_JP",
     type: "website",
   },
@@ -65,14 +67,15 @@ export default function Home() {
           className="text-sm font-medium tracking-[0.3em] mb-6"
           style={{ color: "var(--text-muted)" }}
         >
-          PERSONAL COACHING
+          PROGRAMS
         </p>
         <h1 className="text-3xl md:text-5xl font-bold leading-snug mb-6" style={{ color: "var(--text)" }}>
-          秦 善成のパーソナルコーチング
+          自分と向き合う時間が、<br className="md:hidden" />
+          次の一歩をつくる。
         </h1>
         <p className="text-base md:text-lg leading-relaxed max-w-xl mx-auto" style={{ color: "var(--text-muted)" }}>
-          国際コーチング連盟（ICF）アソシエイト認定コーチ。<br />
-          あなたに合うスタイルで選べる、2つのプログラムを提供しています。
+          対話で整える。書いて深める。<br />
+          あなたに合うスタイルで選べる、個人向けプログラムです。
         </p>
       </section>
 
