@@ -7,7 +7,7 @@ const plans = [
     frequency: "月1回",
     duration: "60分 / 回",
     price: "4,500",
-    unit: "円 / 月",
+    unit: "円 / 月（税込）",
     features: [
       "月1回・60分のオンラインセッション",
       "現在地の確認・目標設定",
@@ -21,7 +21,7 @@ const plans = [
     frequency: "月2回",
     duration: "60分 / 回",
     price: "8,000",
-    unit: "円 / 月",
+    unit: "円 / 月（税込）",
     features: [
       "月2回・60分のオンラインセッション",
       "2週間ごとの振り返りと目標設定",
@@ -166,6 +166,13 @@ export default function Pricing() {
             無料体験を申し込む
           </a>
         </motion.div>
+        <p className="mt-6 text-[12.5px] text-center leading-relaxed" style={{ color: "var(--text-muted)" }}>
+          お支払いはクレジットカードで、毎月その月の初回セッションの前にお願いしています。
+          <br className="hidden sm:inline" />
+          キャンセルや返金の扱いは
+          <a href="/tokushoho" className="underline underline-offset-2 hover:opacity-70">特定商取引法に基づく表記</a>
+          をご覧ください。
+        </p>
       </div>
     </section>
   );

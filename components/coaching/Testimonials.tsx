@@ -60,7 +60,7 @@ export default function Testimonials() {
                 className="text-4xl font-serif mb-3 leading-none"
                 style={{ color: "var(--accent)" }}
               >
-                "
+                “
               </p>
               <p className="text-sm leading-relaxed flex-1 mb-5" style={{ color: "var(--text)" }}>
                 {t.text}

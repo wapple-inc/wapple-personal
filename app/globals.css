@@ -28,7 +28,8 @@ body {
 /* ===== ジャーナリング・コーチングLP 専用テーマ =====
    /coaching は :root のテラコッタ系を維持し、/journaling のみ
    「インクブルー×紙」の配色と明朝体見出しに切り替える */
-.journaling-theme {
+.journaling-theme,
+.journaling-vars {
   --bg: #FAF9F6;
   --bg-section: #EEF1F0;
   --text: #24313B;
@@ -36,6 +37,8 @@ body {
   --accent: #35586C;
   --accent-hover: #294657;
   --border: #DFE5E4;
+}
+.journaling-theme {
   background-color: var(--bg);
   color: var(--text);
 }
@@ -46,4 +49,28 @@ body {
 }
 .journaling-theme a.rounded-full {
   border-radius: 3px;
+}
+
+::selection { background: var(--accent); color: #fff; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* 一滴から広がる波紋（ヒーローの背景） */
+@keyframes ripple-out {
+  0% { transform: scale(0.2); opacity: 0; }
+  12% { opacity: 0.55; }
+  100% { transform: scale(1); opacity: 0; }
+}
+.ripple-ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  border: 1px solid var(--accent);
+  animation: ripple-out 9s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ripple-ring { animation: none; opacity: 0.25; }
+  .ripple-ring:nth-child(1) { transform: scale(0.35); }
+  .ripple-ring:nth-child(2) { transform: scale(0.6); }
+  .ripple-ring:nth-child(3) { transform: scale(0.85); }
 }

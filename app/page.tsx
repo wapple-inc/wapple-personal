@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  // 画面上には個人名を出さない方針（本人希望）。指名検索対策として
-  // title と構造化データにのみ名前を残す。
-  title: "パーソナルコーチング・個人向けプログラム | 秦善成",
+  title: { absolute: "個人向けコーチング | Wapple" },
   description:
     "対話で目標と行動を整える「伴走コーチング」と、書く×話すで内省を深める「ジャーナリング・コーチング」。個人向けのオンラインプログラムを提供しています。",
   alternates: { canonical: "https://www.wapple.life/" },
@@ -12,25 +10,9 @@ export const metadata: Metadata = {
     description:
       "対話で整える「伴走コーチング」と、書いて深める「ジャーナリング・コーチング」。無料体験セッション受付中。",
     url: "https://www.wapple.life/",
-    siteName: "wapple.life",
-    locale: "ja_JP",
-    type: "website",
   },
 };
 
-// 秦善成のPerson正本は会社サイト（wapple.co.jp/profile）。同一@idを参照して
-// 検索エンジンに同一人物であることを伝え、評価をco.jpに集約する。
-const personJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "@id": "https://wapple.co.jp/profile#person",
-  name: "秦 善成",
-  alternateName: ["秦善成", "はた よしなり", "Yoshinari Hata"],
-  url: "https://wapple.co.jp/profile",
-  jobTitle: "代表取締役",
-  worksFor: { "@type": "Organization", name: "株式会社Wapple", url: "https://wapple.co.jp" },
-  sameAs: ["https://www.wapple.life"],
-};
 
 const programs = [
   {
@@ -56,13 +38,9 @@ const programs = [
 export default function Home() {
   return (
     <main style={{ backgroundColor: "var(--bg)" }}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
-      />
 
       {/* ヘッダー */}
-      <section className="pt-24 pb-12 px-6 text-center">
+      <section className="pt-36 md:pt-44 pb-12 px-6 text-center">
         <p
           className="text-sm font-medium tracking-[0.3em] mb-6"
           style={{ color: "var(--text-muted)" }}
@@ -117,19 +95,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* フッター */}
-      <section className="py-12 px-6 text-center" style={{ backgroundColor: "var(--bg-section)" }}>
-        <p className="text-sm" style={{ color: "var(--text-muted)" }}>
-          運営会社：
-          <a href="https://wapple.co.jp/" className="underline underline-offset-2 hover:opacity-70">
-            株式会社Wapple
-          </a>
-          ／
-          <a href="https://wapple.co.jp/profile" className="underline underline-offset-2 hover:opacity-70">
-            代表プロフィール（詳細）
-          </a>
-        </p>
-      </section>
     </main>
   );
 }

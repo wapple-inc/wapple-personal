@@ -110,6 +110,11 @@ export default function Pricing() {
           </a>
           ）への接続も可能です。
         </motion.p>
+        <p className="mt-4 text-[12.5px] text-center leading-relaxed" style={{ color: "var(--text-muted)" }}>
+          お支払いはクレジットカードで、初回セッションの前に一括でお願いしています。キャンセルや返金の扱いは
+          <a href="/tokushoho" className="underline underline-offset-2 hover:opacity-70">特定商取引法に基づく表記</a>
+          をご覧ください。
+        </p>
       </div>
     </section>
   );
